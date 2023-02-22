@@ -1,6 +1,10 @@
 .header-area {
+    position: sticky;
     background: #fff;
-    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 .header-area  .nav-logo{
     max-width: 90px;
@@ -62,9 +66,15 @@ header .navbar .btn-quote {
     font-size: 14px;
     color: #fff;
     letter-spacing: 0.75px;
-    border-radius: 6px;
     background-color: var(--bg);
+    border:2px solid transparent;
     border-radius: 100px 0px 100px 100px;
+    transition: all .3s ease all;
+}
+header .navbar .btn-quote:hover {
+    background-color: #fff;
+    border:2px solid var(--bg) !important;
+    color:var(--bg);
 }
 .banner-content h1{
     font-size: 40px;
@@ -444,15 +454,20 @@ position: relative;
     color: #fff;
 }
 .video-wrapper {
-padding: 20px 20px 20px 20px;
-background-color: #FFFFFF;
-border-style: solid;
-border-width: 2px 2px 2px 2px;
-border-radius: 100px 100px 100px 100px;
-border-color: #FFFFFF;
--webkit-transition: .5s -webkit-animation ripple-red 1s linear infinite;
-animation: ripple-red 1s linear infinite;
--webkit-transition: .5s;
+    padding: 20px 20px 20px 20px;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 100px 100px 100px 100px;
+    border-color: #FFFFFF;
+    -webkit-transition: .5s -webkit-animation ripple-red 1s linear infinite;
+    animation: ripple-red 1s linear infinite;
+    -webkit-transition: .5s;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @keyframes ripple-red {
     0% {
@@ -535,7 +550,7 @@ color: var(--bg2);
 }
 .footer-area{
 background-color: var(--bg);
-padding: 70px 0px;
+padding: 70px 0px 25px;
 }
 .footer-area .contact-link a,
 .footer-area .copy-right a{
@@ -660,6 +675,7 @@ color: #fff;
         background: #fff;
         box-shadow: 0 2px 48px 0 rgb(0 0 0 / 6%);
     }
+    
     .news-side  .search-widget input[type="text"] {
         background-color: var(--white);
         border: 2px solid;
@@ -680,7 +696,7 @@ color: #fff;
         border-color: var(--bg2);
     }
     
-    .news-side     .search-widget button {
+    .news-side .search-widget button {
         position: absolute;
         right: 0;
         height: 100%;
@@ -819,7 +835,94 @@ color: #fff;
         padding: 15px 20px;
         min-height: 150px;
     }
- 
+
+    .resource-wrapper{
+        padding: 70px 0px;
+    }
+  .download-icon {
+        width: 14px;
+        height: 14px;
+    }
+    .download-info {
+
+        display: flex;
+        width: 28px;
+        height: 28px;
+        margin-right: 14px;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background-color: var(--bg);
+    }
+    .research-wrapper .search-box select,
+    .research-wrapper .search-box input[type="text"] {
+        height: 65px;
+        padding-left: 20px;
+        font-size: 15px;
+        color: #071c1f;
+        border-radius: 0;
+        padding-right: 20px;
+        position: relative;
+        width: 45%;
+    
+    }
+    .research-wrapper .search-box input[type="text"]{
+        border-right: 1px solid var(--bg);
+        
+    }
+    .research-wrapper .search-box button {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        padding: 0 20px;
+        color: var(--white);
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        background-color: var(--bg);
+    }
+    .research-wrapper .search-box {
+        border: 2px solid var(--bg);
+    }
+    .news-carousel.owl-theme .owl-nav [class*=owl-] {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 4px 20px rgb(0 0 0 / 10%);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        color:var(--bg);
+        transform: translateY(-50%);
+        background-color: #fff;
+    }
+    .news-carousel .owl-nav button.owl-prev {
+        right: auto;
+        left: 5.5%;
+    }
+    .news-carousel .owl-nav button.owl-next {
+        right: 5.5%;
+        left: auto;
+    }
+    .news-post  .video-wrapper{
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .news-widget-com  .search-box select{
+        width: 40%;
+    }
 /* .h-500{
 min-height: 400px;
 max-height: 100%;
